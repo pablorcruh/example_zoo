@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: item
+  datasource:
+    url: jdbc:mysql://localhost:3306/zoo
+    username: zoo
+    password: zoo
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL57Dialect
+    generate-ddl: true
