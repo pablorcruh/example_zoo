@@ -36,4 +36,14 @@ public class AnimalController {
     public ResponseEntity<List<Animal>> getAllAnimals(){
         return ResponseEntity.ok(animalService.getAllAnimals());
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Animal> getAnimalById(@PathVariable Long id){
+        return ResponseEntity.ok(animalService.getAnimalById(id));
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Animal> updateAnimal(@PathVariable Long id, @Valid @RequestBody AnimalRequest animalRequest){
+        return ResponseEntity.ok(animalService.updateAnimal(id, animalRequest));
+    }
 }

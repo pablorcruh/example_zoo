@@ -9,4 +9,8 @@ public interface AnimalService {
     Long createAnimal(AnimalRequest animalRequest);
 
     List<Animal> getAllAnimals();
+
+    Animal getAnimalById(Long id);
+
+    Animal updateAnimal(Long id, AnimalRequest animalRequest);
 }
