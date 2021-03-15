@@ -46,4 +46,9 @@ public class AnimalController {
     public ResponseEntity<Animal> updateAnimal(@PathVariable Long id, @Valid @RequestBody AnimalRequest animalRequest){
         return ResponseEntity.ok(animalService.updateAnimal(id, animalRequest));
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Long> deleteAnimal(@PathVariable Long id){
+        return ResponseEntity.ok(animalService.deleteById(id));
+    }
 }

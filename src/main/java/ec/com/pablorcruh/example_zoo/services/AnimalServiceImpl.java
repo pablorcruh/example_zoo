@@ -56,4 +56,15 @@ public class AnimalServiceImpl implements AnimalService{
         animalToUpdate.setCategory(animalRequest.getCategory());
         return animalToUpdate;
     }
+
+    @Override
+    public Long deleteById(Long id) {
+        Optional<Animal> animalFromDatabase = repository.findById(id);
+        if(animalFromDatabase.isEmpty()){
+            throw new AnimalNotFoundException("Animal not Found");
+        }
+        Animal animalToDelete = animalFromDatabase.get();
+        repository.delete(animalToDelete);
+        return animalToDelete.getId();
+    }
 }

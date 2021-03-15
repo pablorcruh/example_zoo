@@ -131,6 +131,13 @@ public class AnimalControllerTest {
                  .andExpect(status().isNotFound());
     }
 
+    @Test
+    public void deleteAnimalWithIdOne() throws Exception {
+        when(animalService.deleteById(1L)).thenReturn(1L);
+        this.mockMvc.perform(delete("/api/animals/1"))
+                .andExpect(status().is2xxSuccessful());
+    }
+
     private Animal createAnimal(Long id, String name, String category){
         Animal animal = new Animal();
         animal.setId(id);

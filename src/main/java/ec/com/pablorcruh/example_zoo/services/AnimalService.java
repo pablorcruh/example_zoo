@@ -13,4 +13,6 @@ public interface AnimalService {
     Animal getAnimalById(Long id);
 
     Animal updateAnimal(Long id, AnimalRequest animalRequest);
+
+    Long deleteById(Long id);
 }
