@@ -28,6 +28,14 @@ To build the project.
     ./mvnw clean install
 ```
 
+To Run tests.
+
+```
+    docker-compose up -d
+    ./mvnw test
+```
+
+
 To build a docker image called example_zoo. Execute from the root
 of the directory.
 ```
