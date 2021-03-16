@@ -18,6 +18,8 @@ jobs:
         image: mysql:5.7
         env:
           MYSQL_ROOT_PASSWORD: zoo
+          MYSQL_DATABASE: zoo
+          MYSQL_USER: zoo
         ports:
           - 3306:3306
     steps:
