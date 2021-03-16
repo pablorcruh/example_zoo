@@ -42,3 +42,29 @@ of the directory.
     docker build -t example_zoo .
 ```
 
+## TEST ENDPOINTS
+To test on localhost:
+
+* GET http://localhost:8080/api/animals
+
+
+* GET http://localhost:8080/api/animals/id
+
+* POST http://localhost:8080/api/animals
+```
+    {
+	"name":"animal 3",
+	"category":"mammal"
+    }
+```
+* DELETE http://localhost:8080/api/animals/id
+
+
+* PUT http://localhost:8080/api/animals/id
+```
+   {
+	"name":"anacondilla",
+	"category":"reptile"
+    }
+```
+
