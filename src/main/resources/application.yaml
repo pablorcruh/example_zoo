@@ -1,6 +1,6 @@
 spring:
   application:
-    name: item
+    name: animal
   datasource:
     url: jdbc:mysql://localhost:3306/zoo
     username: zoo
