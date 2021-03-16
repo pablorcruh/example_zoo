@@ -42,6 +42,22 @@ of the directory.
     docker build -t example_zoo .
 ```
 
+## RUN THE PROJECT ON CONTAINERS
+There is a folder called demo where you can find a docker-compose
+file to startup the backend without running any other commands
+
+Inside the demo folder
+```
+    docker-compose up -d
+```
+
+To stop everything
+```
+    docker-compose down
+```
+
+The tag on the image used has been tested 
+
 ## TEST ENDPOINTS
 To test on localhost:
 
@@ -67,4 +83,3 @@ To test on localhost:
 	"category":"reptile"
     }
 ```
-
